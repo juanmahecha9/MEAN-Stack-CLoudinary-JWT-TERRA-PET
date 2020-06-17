@@ -1,0 +1,51 @@
+h2 {
+    text-align: center;
+    color: green;
+    margin-top: 25px;
+}
+
+.container {
+    width: 100%;
+margin-bottom: 10px;
+    form {
+        width: 60%;
+        border: 1px green solid;
+        border-radius: 45px;
+        margin: auto;
+
+        .contenedor {
+            padding: 15px;
+            width: 55%;
+            margin: auto;
+
+            label {
+                text-align: center;
+                margin: auto;
+                margin-bottom: 5px;
+                font-family: cursive;
+            }
+
+            input {
+                width: 100%;
+                margin-bottom: 15px;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }
+        }
+
+        #btn {
+            text-decoration: none;
+            color: #5b5772;
+            border-radius: 4px;
+            display: inline-block;
+            margin: .5em;
+            padding: .5em;
+            background-color: #c2d63e;
+            margin: auto;
+            text-align: center;
+
+            &:hover {
+                background-color: #c6d375;
+            }
+        }
+    }
+}

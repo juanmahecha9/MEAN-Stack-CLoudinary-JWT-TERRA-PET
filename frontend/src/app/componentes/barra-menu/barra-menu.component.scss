@@ -1,0 +1,119 @@
+.cont-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 200;
+    font-weight: bold;
+    opacity: .9;
+
+    .btn-nav {
+        position: absolute;
+        width: 3em;
+        height: 3em;
+        /* border: 2px solid red; */
+        display: none;
+        top: 3px;
+        left: 3px;
+        justify-content: center;
+        align-items: center;
+        background-color: #c2d63e;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px #00000013;
+
+        &__icon {
+            width: 2.2em;
+            height: 2.2em;
+            background-image: url(../../../assets/img/barra-menu_imgs/menu.svg);
+            background-size: cover;
+        }
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+        }
+    }
+
+    .barnav {
+        background-color: #5ea25f;
+        display: flex;
+        font-family: 'Sniglet', cursive;
+        /* border: 1px solid purple; */
+        animation-name: none;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, .06);
+        
+        &__link {
+            text-decoration: none;
+            padding: 1em;
+            display: inline-block;
+            color: #fff;
+
+            &:hover {
+                background-color: #5c5c5c4d;
+                transition: ease-in-out .2s;
+            }
+        }
+
+        &__btn-sesion {
+            text-decoration: none;
+            color: #5b5772;
+            border-radius: 4px;
+            display: inline-block;
+            margin: .5em;
+            padding: .5em;
+            background-color: #c2d63e;
+
+            &:hover {
+                background-color: #c6d375;
+            }
+        }
+    } 
+}
+
+
+/* Responsive si es menos de 600px */
+@media (max-width:768px) {
+    .cont-header {
+
+        .btn-nav {
+            display: flex;
+            z-index: 2;
+        }
+
+        .barnav {
+            display: block;
+            position: absolute;
+            top: 4em;
+            width: 200px;
+            z-index: 100;
+            animation-name: ocultaMenu;
+            animation-duration: .5s;
+            animation-fill-mode: forwards;
+            box-shadow: 0 2px 4px #00000013;
+            border-radius: 0 4px 4px 0;
+
+            &__cont-link {
+                border-bottom: 1px solid #ffffff9c;
+
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
+
+            &__link {
+                width: 200px;
+                padding: 18px 0 18px 18px;
+            }
+        }
+    }
+}
+
+/* Animaciones */
+@keyframes ocultaMenu {
+    0% {left: 0;}
+    100% {left: -100%;}
+}
+
+@keyframes muestraMenu {
+    0% {left: -100%;}
+    100% {left: 0;}
+}

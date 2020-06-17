@@ -1,0 +1,36 @@
+h3{
+    text-align: center;
+}
+.listado{
+    width: 100%;
+}
+.listado .datos{
+    width: 60%;
+    margin: auto;
+    border: 1px black solid;
+    border-radius:  15px;
+}
+
+.listado .datos form{
+    width: 60%;
+    padding: 15px;
+    margin: auto;
+}
+.listado .datos form input{
+    margin: auto;
+    width: 100%;
+}
+.botones{
+    width: 100%;
+}
+.btn{
+    width: 25%;
+    text-align: center;
+    margin: auto;
+}
+button{
+    margin-bottom: 10px;
+    margin-left: 15px;
+    border-radius: 15px;
+    background-color: rgb(129, 129, 193);
+}

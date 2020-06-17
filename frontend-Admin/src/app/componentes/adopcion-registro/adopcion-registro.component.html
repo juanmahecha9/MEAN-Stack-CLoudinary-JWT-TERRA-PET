@@ -1,0 +1,79 @@
+<h1>Lista de cargados al sistema</h1>
+<br>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand" routerLink="/">TERRA ANIMAL IMAGES</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/photos">NUESTROS PELUDITOS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/photos/new">CARGA AL PELUDITO CON MUCHO AMOR</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/solicitudes">SOLICITUDES</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<br>
+<h3>Procesos registrados</h3>
+<br>
+
+
+<div class="listado">
+<div class="datos">
+
+<!-- Crear un blucle en el div  que recorre la DB-->
+<div *ngFor="let producto of productosEncontrados">
+    <!-- #actualizarProductos = "ngForm"  indicar que es un formulario de agular -->
+    <form #actualizarProductos="ngForm">
+        <label for="nombre">Nombre: </label> <br>
+        <input type="text" id="nombre" required #nombre="ngModel" name="name" [(ngModel)]=producto.name>
+        <br>
+        <!-- Crear el input done se inserta ls datos para actualizar -->
+        <label for="email">email: </label> <br>
+        <input type="text" id="email" required #email="ngModel" name="email" [(ngModel)]=producto.email>
+        <br>
+        <label for="pet">mascota: </label> <br>
+        <input type="text" id="pet" required #pet="ngModel" name="pet" [(ngModel)]=producto.pet>
+        <br>
+        <label for="phone">Telefono: </label> <br>
+        <input type="text" id="phone" required #phone="ngModel" name="phone" [(ngModel)]=producto.phone>
+        <br>
+        <label for="ocupation">ocupación: </label> <br>
+        <input type="text" id="ocupation" required #ocupation="ngModel" name="ocupation" [(ngModel)]=producto.ocupation>
+        <br>
+        <label for="income">ingresos: </label> <br>
+        <input type="text" id="income" required #income="ngModel" name="income" [(ngModel)]=producto.income>
+        <br>
+        <label for="adress">Dirección: </label> <br>
+        <input type="text" id="adress" required #adress="ngModel" name="adress" [(ngModel)]=producto.adress>
+        <br>
+        <label for="type1">Tipo de vivienda: </label> <br>
+        <input type="text" id="type1" required #type1="ngModel" name="type1" [(ngModel)]=producto.type1>
+        <br>
+        <label for="createdAt">Fecha Solicitud: </label> <br>
+        <input type="text" id="type1" required #tcreatedAt="ngModel" name="createdAt" [(ngModel)]=producto.createdAt>
+        <br>
+    </form>
+
+    <!-- Crear botones con las funciones  restantes-->
+    
+    <div class="botones">
+        <div class="btn">
+            <button (click)="editar(producto)">EDITAR</button>
+    <br>
+    <button (click)="eliminarProductos(producto._id)">Eliminar</button>
+    <br>
+        </div>
+    </div>
+</div>
+</div>
+</div>

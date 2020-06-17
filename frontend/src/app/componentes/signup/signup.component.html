@@ -1,0 +1,31 @@
+
+
+
+<div class="body">
+    <br>
+    <div class="contenedor-form">
+    <div class="toggle">
+        <span><a style="text-decoration: none; color: white;" routerLink="/login">Login</a></span>
+    </div>
+    <div class="formulario">
+        <h2>Crea tu Cuenta</h2>
+        <form   (ngSubmit)="signUp()">
+            <input type="text" placeholder="A que te dedicas?" name="ocupation" #nombre="ngModel"
+                [(ngModel)]="user.ocupation" autofocus required>
+            <input type="text" placeholder="Ingresos" #nombre="ngModel" [(ngModel)]="user.income" required
+                name="income">
+            <input type="text" placeholder="Mascota de interes" name="pet" #nombre="ngModel" [(ngModel)]="user.pet">
+            <input type="text" placeholder="Nombre" name="name" #nombre="ngModel" [(ngModel)]="user.name" required>
+            <input type="password" placeholder="Constraseña" name="password" #nombre="ngModel"
+                [(ngModel)]="user.password" required>
+            <input type="email" placeholder="Correo Electronico" name="email" #nombre="ngModel"
+                [(ngModel)]="user.email" required>
+            <input type="text" placeholder="Dirección" name="adress" #nombre="ngModel" [(ngModel)]="user.adress">
+            <input type="text" placeholder="Telefono" name="phone" #nombre="ngModel" [(ngModel)]="user.phone">
+            <br>
+            <input type="submit"  value="Registrarse">
+            <!-- <input type="submit" value="Registrarse">-->
+        </form>
+    </div>
+</div>
+</div>

@@ -1,0 +1,23 @@
+<div class="body">
+    <h1 style="text-align: center; margin-top: 10px;">
+        Emprendiendo un mundo nuevo
+</h1>
+<br>
+<br>
+<div class="contenedor-form">
+    <div class="toggle">
+        <span><a style="text-decoration: none; color: white;" routerLink="/registro">Registrate</a></span>
+    </div>
+
+    <div class="formulario">
+        <h2>Ingreso</h2>
+        <form (ngSubmit)="signIn()">
+            <input type="email" placeholder="Correo Electronico" name="email" #nombre="ngModel"
+                [(ngModel)]="user.email" required>
+            <input type="password" placeholder="Constraseña" name="password" #nombre="ngModel"
+                [(ngModel)]="user.password" required>
+            <input type="submit"  value="Iniciar Sesión">
+        </form>
+    </div>
+
+</div>

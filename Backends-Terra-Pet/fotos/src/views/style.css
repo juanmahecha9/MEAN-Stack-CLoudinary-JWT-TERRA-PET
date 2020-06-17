@@ -1,0 +1,22 @@
+.cont{
+    width: 100%;
+}
+
+.contenido{
+    width: 50%;
+    margin: auto;
+}
+
+.nombre{
+    width: 100%;
+    border: blue 1px solid;
+}
+
+.carta{
+    border: 1px blue solid;    
+}
+.im{
+    width: 50%;
+text-align: center;    margin: auto;
+
+}

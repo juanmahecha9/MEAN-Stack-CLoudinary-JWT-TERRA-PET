@@ -1,0 +1,39 @@
+<header class="cont-header">
+
+    <div class="btn-nav" for="linkNav" (click)="toggleMenu(barNav)">
+        <div class="btn-nav__icon"></div>
+    </div>
+
+    <nav class="barnav" #barNav>
+        <div class="barnav__cont-link">
+            <a routerLink="/inicio" class="barnav__link">Home</a>
+        </div>
+        <div class="barnav__cont-link">
+            <a routerLink="/photos" class="barnav__link">Adopciones</a>
+        </div>
+        <div class="barnav__cont-link">
+            <a routerLink="/aboutus" class="barnav__link">About Us</a>
+        </div>
+        <div class="barnav__cont-link">
+            <a routerLink="/team" class="barnav__link">Team</a>
+        </div>
+        <div class="barnav__cont-link">
+            <a routerLink="/carrito" class="barnav__link">Tienda</a>
+        </div>
+
+        
+        <ng-container *ngIf="!auth.loggedIn(); else cerrarSesion">
+        <div class="barnav__cont-link">
+            <a routerLink="/login" class="barnav__btn-sesion">Iniciar sesión</a>
+        </div>
+        </ng-container>
+        
+        <ng-template #cerrarSesion>
+            <div class="barnav__cont-link">
+                <a routerLink="/team" (click)="auth.logout()" class="barnav__btn-sesion">Cerrar sesión</a>
+            </div>
+        </ng-template>
+       
+    </nav>
+</header>
+<br>
