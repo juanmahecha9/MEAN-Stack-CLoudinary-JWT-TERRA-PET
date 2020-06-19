@@ -1,0 +1,126 @@
+<h2>SOLICITUD DE ADOPCIÓN DE MASCOTAS</h2>
+<div class="container">
+  <form #DataFormulario="ngForm" (ngSubmit)="formularioUp()">
+    <div class="contenedor">
+      <!-- #DataFormulario="ngForm" define que el formulario con su id es un formulario angular -->
+      <!-- (ngSubmit) ="FormularioUp() indica la accion a ejecutar cuando se envie el formulario -->
+      <label for="name">Nombre Completo: </label>
+      <br />
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Ingrese su nombre completo"
+        required
+        #name="ngModel"
+        [(ngModel)]="Producto.name"
+      />
+      <!--[(ngMOdel)]="Producto.nombre" producto es lo que se importa y se inserta el nombre SIGNIFICA que el valor ingresado sera guardado en el modelo en el campo nombre
+        #nombre="ngModel" SIGNIFICA QUE LE INPUT es un input de angular para tener acceso alos datos  -->
+      <br />
+      <label for="email">Correo electronico: </label>
+      <br />
+      <input
+        type="text"
+        id="email"
+        name="email"
+        placeholder="Ingrese su correo electronico"
+        required
+        #email="ngModel"
+        [(ngModel)]="Producto.email"
+      />
+      <!--[(ngMOdel)]="Producto.email" producto es lo que se importa y se inserta el nombre SIGNIFICA que el valor ingresado sera guardado en el modelo en el campo nombre
+            #email="ngModel" SIGNIFICA QUE LE INPUT es un input de angular para tener acceso alos datos  -->
+      <br />
+      <label for="nombre">Mascota y/o Mascostas de interes: </label>
+      <br />
+      <input
+        type="text"
+        id="pet"
+        name="pet"
+        placeholder="Mascota en la que esta interesado (Nombre)"
+        required
+        #pet="ngModel"
+        [(ngModel)]="Producto.pet"
+      />
+      <!--[(ngMOdel)]="Producto.pet" producto es lo que se importa y se inserta el nombre SIGNIFICA que el valor ingresado sera guardado en el modelo en el campo nombre
+                #pet="ngModel" SIGNIFICA QUE LE INPUT es un input de angular para tener acceso alos datos  -->
+      <br />
+      <label for="nombre">Telefono: </label>
+      <br />
+      <input
+        type="text"
+        id="phone"
+        name="phone"
+        placeholder="Ingrese su telefono de contacto"
+        required
+        #phone="ngModel"
+        [(ngModel)]="Producto.phone"
+      />
+      <!--[(ngMOdel)]="Producto.phone" producto es lo que se importa y se inserta el nombre SIGNIFICA que el valor ingresado sera guardado en el modelo en el campo nombre
+                    #phone="ngModel" SIGNIFICA QUE LE INPUT es un input de angular para tener acceso alos datos  -->
+      <br />
+
+      <label for="ocupation">Ocupación: </label>
+      <br />
+      <input
+        type="text"
+        id="ocupation"
+        name="ocupation"
+        placeholder="Ingrese a que se dedica actualmente"
+        required
+        #ocupation="ngModel"
+        [(ngModel)]="Producto.ocupation"
+      />
+      <!--[(ngMOdel)]="Producto.phone" producto es lo que se importa y se inserta el nombre SIGNIFICA que el valor ingresado sera guardado en el modelo en el campo nombre
+                        #phone="ngModel" SIGNIFICA QUE LE INPUT es un input de angular para tener acceso alos datos  -->
+      <br />
+
+      <label for="income">Ingresos mensuales: </label>
+      <br />
+      <input
+        type="text"
+        id="income"
+        name="income"
+        placeholder="Ingrese sus ingresos"
+        required
+        #income="ngModel"
+        [(ngModel)]="Producto.income"
+      />
+      <!--[(ngMOdel)]="Producto.phone" producto es lo que se importa y se inserta el nombre SIGNIFICA que el valor ingresado sera guardado en el modelo en el campo nombre
+                            #phone="ngModel" SIGNIFICA QUE LE INPUT es un input de angular para tener acceso alos datos  -->
+      <br />
+
+      <label for="adress">Dirección de residencia: </label>
+      <br />
+      <input
+        type="text"
+        id="adress"
+        name="adress"
+        placeholder="Ingrese su direccion de residencia"
+        required
+        #adress="ngModel"
+        [(ngModel)]="Producto.adress"
+      />
+      <!--[(ngMOdel)]="Producto.phone" producto es lo que se importa y se inserta el nombre SIGNIFICA que el valor ingresado sera guardado en el modelo en el campo nombre
+                                #phone="ngModel" SIGNIFICA QUE LE INPUT es un input de angular para tener acceso alos datos  -->
+      <br />
+
+      <label for="type1">Tipo de vivienda: </label>
+      <br />
+      <input
+        type="text"
+        id="type1"
+        name="type1"
+        placeholder="Ingrese el tipo de vivienda en la que reside"
+        required
+        #type1="ngModel"
+        [(ngModel)]="Producto.type1"
+      />
+      <!--[(ngMOdel)]="Producto.phone" producto es lo que se importa y se inserta el nombre SIGNIFICA que el valor ingresado sera guardado en el modelo en el campo nombre
+                                    #phone="ngModel" SIGNIFICA QUE LE INPUT es un input de angular para tener acceso alos datos  -->
+      <br />
+      <button type="submit" id="btn">Registrar solicutud de adopción</button>
+    </div>
+  </form>
+</div>

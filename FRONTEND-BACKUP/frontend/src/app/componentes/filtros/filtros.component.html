@@ -1,0 +1,66 @@
+<!-- <h1>Lista a cada uno de los peluditos </h1>
+<br>
+<div class="primario">
+    <div class="secundario">
+        <button id="btn"  routerLink="/adopcion-proceso" (click)="actualizar()">Solicitar proceso de adopción</button>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-md-4 p-5" *ngFor="let photo of photos">
+        <div class="card card-photo contimg" (click)="selectedCard(photo._id)">
+            <div class="card-header">
+                {{photo.title}}
+            </div>
+            <div class="imagen">
+                <img [src]="'http://localhost:5000/' + photo.imagePath" class="classimg">
+            </div>
+            <div class="card-body">
+                <p>{{photo.description}}</p>
+            </div>
+            <div class="btn">
+                <input style="display: none;" type="text" name="view" value="Interesado en adopción" [(ngModel)]=user.view id="">
+            </div>
+        </div>
+    </div>
+</div> -->
+<br>
+<div class="primario">
+    <div class="secundario">
+        <button id="btn"  routerLink="/adopcion-proceso" (click)="actualizar()">Solicitar proceso de adopción</button>
+    </div>
+</div>
+
+<h1>Lista a cada uno de los peluditos </h1>
+<br>
+<div class="container">
+    <div class="card-group">
+      <div *ngFor="let producto of productosEncontrados">
+        <div class="pd-2 container">
+          <div class="card">
+            <form #actualizarProductos="ngForm">
+              <img
+                class="imagendb"
+                style="width: 100%;"
+                [src]="producto.url"
+                alt="producto.title"
+              />
+              <div class="card-body">
+                <h4  style="text-align: center; color: green;" class="card-title">Peludito:</h4>
+                <h3>{{ producto.title }}</h3>
+                <br />
+                <i>{{ producto.description }}</i>
+              </div>
+              <div class="card-footer">
+                <span>
+                  Posteado el dia:
+                  <small class="text-muted">{{ producto.createdAt }}</small>
+                </span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

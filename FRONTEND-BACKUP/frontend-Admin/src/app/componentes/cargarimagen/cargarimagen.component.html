@@ -1,0 +1,31 @@
+<h1>Cargar imagenes</h1>
+<div class="container">
+  <form #DataFormulario="ngForm" (ngSubmit)="formularioUp()">
+    <label for="title">Title</label>
+    <br />
+    <input
+      type="text"
+      name="title"
+      id="title"
+      placeholder="title"
+      required
+      [(ngModel)]="Producto.title"
+      #title="ngModel"
+    />
+    <br />
+    <label for="description">Description</label>
+    <br />
+    <input
+      type="text"
+      name="description"
+      id="description"
+      placeholder="description"
+      required
+      [(ngModel)]="Producto.description"
+      #description="ngModel"
+    />
+    <br />
+    <input type="file" name="imagen">
+    <button type="submit" id="btn">Registrar</button>
+  </form>
+</div>

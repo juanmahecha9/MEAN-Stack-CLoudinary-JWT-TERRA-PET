@@ -1,0 +1,8 @@
+@media (max-width: 600px) {
+    .cotenido{
+        width: 100%;
+    }
+    iframe{
+        width: 100%;
+    }
+  }

@@ -1,0 +1,37 @@
+<h2>Carrito neko kawaii</h2>
+
+<form #carritoFormulario='ngForm' (ngSubmit)="formularioUp()">
+    <label for="">Nombre:</label>
+    <input type="text" name="nombre" id="nombre" placeholder="nombre" required #nombre [(ngModel)]="Carrito.name">
+    <br>
+
+    <label for="">Descripción:</label>
+    <input type="text" name="description" id="description" placeholder="descripcion" required #nombre [(ngModel)]="Carrito.descripcion">
+    <br>
+
+    <label for="">Region:</label>
+    <input type="text" name="region" id="region" placeholder="region" required #nombre [(ngModel)]="Carrito.region">
+    <br>
+
+    <button>Guardar</button>
+</form>
+
+<div *ngFor="let contAnimal of animalesEncontrados">
+
+    <!-- Indicar que es un formulario Angular -->
+    <form action="" #actualizarProductosForm="ngForm">
+        <label for="">Nombre: </label>
+        <!-- Input donde se insertarán lso datos de la DB a traves del contador creado en el ngFor -->
+        <input type="text" id="name" required #name="ngModel" name="name" [(ngModel)]="contAnimal.name">
+        <br>
+
+        <label for="">Marca: </label>
+        <input type="text" id="descripcion" required #descripcion="ngModel" name="descripcion" [(ngModel)]="contAnimal.descripcion>
+        <br>
+
+        <label for="">Precio: </label>
+        <input type="text" id="region" required #region="ngModel" name="region" [(ngModel)]="contAnimal.region">
+        <br>
+    </form>
+    <br>
+</div>
